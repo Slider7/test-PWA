@@ -169,8 +169,7 @@ function getForecastFromCache(coords) {
   if (!('caches' in window)) {
     return null;
   }
-  console.log(`location origin:  + ${window.location.origin}`);
-  const url = `${window.location.origin}/forecast/${coords}`;
+  const url = `${window.location.origin}/test-PWA/forecast/${coords}`;
   return caches
     .match(url)
     .then(response => {
